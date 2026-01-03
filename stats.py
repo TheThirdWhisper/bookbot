@@ -15,6 +15,12 @@ def character_count(book_text):
             character_count[char] +=1 #if the char already exists as a key then its integer value is increased by 1
         else:
             character_count[char] = 1 #if the char is not already a key then it gets created with an initial value of 1
-    return character_count    
-
+    return character_count
+def sort_on(items):
+    return items[1]    
+def character_count_sort(character_count_dict):
+    #This function will sort a provided dictionary from largest to smallest number
+    dict_to_sort = character_count_dict
+    sorted_dict = dict(sorted(dict_to_sort.items(), key=sort_on, reverse=True))
+    return sorted_dict
 
